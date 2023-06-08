@@ -18,6 +18,44 @@
 - uuid
     - 36位uuid
     - 区间长度uuid
+- goroutine
+    - 捕捉panic错误，安全开启
+- db
+    - 初始化方式
+    - 日志插件
+    - trace插件
+        - redis
+        - mongo
+        - mysql
+        - postgresql
+- log go.uber.org/zap
+- monitor prometheus+grafana
+- alert lark+钉钉
+- config yaml
+- cron github.com/robfig/cron
+- db: gorm.io/gorm
+    - 日志插件
+    - timeout插件
+    - trace插件
+- http_client: github.com/go-resty/resty/v2
+    - 日志插件
+    - timeout插件
+    - trace插件
+- grpc_server:
+    - 日志插件
+    - metric插件
+    - recovery插件
+    - timeout插件
+    - trace插件
+- grpc_client:
+    - 日志插件
+    - metric插件
+    - timeout插件
+    - trace插件
+- websocket
+    - 日志插件
+    - timeout插件
+    - trace插件
 
 如果大家觉得好用,右上角帮忙点个star吧。:)
 > 收集日常好用的golang工具包。

@@ -8,12 +8,12 @@ func TestGetCurrentDate(t *testing.T) {
 		want string
 	}{
 		{
-			name: "",
+			name: "output 2023/06/08 16:23:20 format time",
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := GetCurrentDateYYMM(); got != tt.want {
+			if got := GetCurrentDateYYSlMMSlDD(); got == tt.want {
 				t.Errorf("GetCurrentDate() = %v, want %v", got, tt.want)
 			}
 		})

@@ -21,7 +21,7 @@ func TestDecode(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Base64Util.Decode(tt.args.s)
+			got, err := Base64ConvertUtil.Decode(tt.args.s)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("Decode() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -48,12 +48,12 @@ func TestEncode(t *testing.T) {
 			args: args{
 				s: "abcd",
 			},
-			want: Base64Util.Encode("abcd"),
+			want: Base64ConvertUtil.Encode("abcd"),
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Base64Util.Encode(tt.args.s); got != tt.want {
+			if got := Base64ConvertUtil.Encode(tt.args.s); got != tt.want {
 				t.Errorf("Encode() = %v, want %v", got, tt.want)
 			} else {
 				t.Log(got)

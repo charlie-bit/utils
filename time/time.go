@@ -1,7 +1,6 @@
 package time
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -18,7 +17,6 @@ func GetCurrentDateYYSlMMSlDD() string {
 	formatter := MakeFormatter(time.Now())
 	formatter.maskSlice = []string{LongYearToken + "/" + ZeroMonthToken + "/" +
 		ZeroDayToken + " " + HourToken + ":" + ZeroMinuteToken + ":" + ZeroSecondToken}
-	fmt.Println(formatter.GetMask())
 	return formatter.Convert()
 }
 

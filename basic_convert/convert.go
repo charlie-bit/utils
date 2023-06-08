@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-type BasicTypeConversionUtil interface {
+type BasicTypeConversionInter interface {
 	StrToInt(s string) int
 	StrToInt64(s string) int64
 	StrToInt32(s string) int32

@@ -1,33 +1,42 @@
 # 功能列表
 
 - basic_convert:
-    - 常见基础数据类型互转，数组互转
+    - [X] 常见基础数据类型互转，数组互转
 - base64
-    - 常见base64加密，解密
+    - [X] 常见base64加密，解密
 - json
-    - 序列化，反序列化
+    - [X] 序列化，反序列化
 - md5
-    - md5加密
+    - [X] md5加密
 - random
-    - 区间随机
+    - [X] 区间随机
 - rsa
-    - 公钥加密
-    - 私钥解密
+    - [X] 公钥加密
+    - [X] 私钥解密
 - time
-    - 时间格式化通用大类
+    - [X] 时间格式化通用大类
 - uuid
-    - 36位uuid
-    - 区间长度uuid
+    - [X] 36位uuid
+    - [X] 区间长度uuid
 - goroutine
-    - 捕捉panic错误，安全开启
+    - [X] 捕捉panic错误，安全开启
 - db
-    - 初始化方式
-    - 日志插件
-    - trace插件
-        - redis
-        - mongo
-        - mysql
-        - postgresql
+    - redis
+        - [X] 初始化方式
+        - 日志插件
+        - trace插件
+    - mongo
+        - [X] 初始化方式
+        - 日志插件
+        - trace插件
+    - mysql
+        - [X] 初始化方式
+        - 日志插件
+        - trace插件
+    - postgresql
+        - [X] 初始化方式
+        - 日志插件
+        - trace插件
 - log go.uber.org/zap
 - monitor prometheus+grafana
 - alert lark+钉钉

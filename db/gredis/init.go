@@ -3,11 +3,10 @@ package gredis
 import (
 	"fmt"
 	"os"
-	"time"
+	"utils/db/gredis/gredis_config"
 	"utils/third_party/go-redis"
 )
 
-// 定义配置结构
 const (
 	StandaloneMode string = "StandaloneMode" // 单机redis
 	ClusterMode    string = "ClusterMode"    // 集群redis
@@ -15,18 +14,17 @@ const (
 
 var (
 	MainRdsConn *RdsCon // 主服务器对应的Redis
-	TeamRdsConn *RdsCon // 公会服务器对应的Redis
 )
 
-func Setup() {
-	MainRdsConn = NewRdsCon(setting.ServerSetting.MainRedisMode, setting.OldRedisSetting, setting.MainRedisCluSetting) // 集群
+func Setup(mode string, staSetting *gredis_config.Redis, cluSetting *gredis_config.RedisClu) {
+	MainRdsConn = NewRdsCon(mode, staSetting, cluSetting) // 集群
 	if MainRdsConn.cli == nil {
 		fmt.Print("connect Redis Failed")
 		os.Exit(3)
 	}
 }
 
-func NewRdsCon(mode string, staSetting *setting.Redis, cluSetting *setting.RedisClu) *RdsCon {
+func NewRdsCon(mode string, staSetting *gredis_config.Redis, cluSetting *gredis_config.RedisClu) *RdsCon {
 	if mode == StandaloneMode {
 		return &RdsCon{
 			cli: newStandaloneClient(staSetting),
@@ -38,7 +36,7 @@ func NewRdsCon(mode string, staSetting *setting.Redis, cluSetting *setting.Redis
 	}
 }
 
-func newStandaloneClient(rdsSetting *setting.Redis) redis.Cmdable { //nolint:ireturn
+func newStandaloneClient(rdsSetting *gredis_config.Redis) redis.Cmdable { //nolint:ireturn
 	client := redis.NewClient(&redis.Options{
 		Addr:         rdsSetting.Host,
 		ReadTimeout:  rdsSetting.ReadTimeout,
@@ -49,18 +47,14 @@ func newStandaloneClient(rdsSetting *setting.Redis) redis.Cmdable { //nolint:ire
 		DB:           rdsSetting.DB,
 	})
 
-	// ping5次，都不通认为失败
-	for i := 0; i < 5; i++ {
-		_, err := client.Ping().Result()
-		if err == nil {
-			return client
-		}
-		time.Sleep(100 * time.Microsecond)
+	_, err := client.Ping().Result()
+	if err != nil {
+		panic(err)
 	}
-	return nil
+	return client
 }
 
-func newClusterClient(cluRdsSetting *setting.RedisClu) redis.Cmdable {
+func newClusterClient(cluRdsSetting *gredis_config.RedisClu) redis.Cmdable {
 	c := redis.NewClusterClient(&redis.ClusterOptions{
 		MaxRedirects: cluRdsSetting.MaxRedirects,
 
@@ -82,10 +76,8 @@ func newClusterClient(cluRdsSetting *setting.RedisClu) redis.Cmdable {
 		Addrs: []string{
 			cluRdsSetting.Slot1,
 			cluRdsSetting.Slot2,
-			cluRdsSetting.Slot3,
 			cluRdsSetting.Slot1Slave,
 			cluRdsSetting.Slot2Slave,
-			cluRdsSetting.Slot3Slave,
 		},
 	})
 

@@ -31,6 +31,7 @@ func (self *RdsCon) Exist(key string) (bool, error) {
 
 // 删除成功返回true，不存在时返回false
 // 删除大key会阻塞，用unlink，严禁用Del
+// https://redis.io/commands/del/
 func (self *RdsCon) Del(key string) (bool, error) {
 	r, err := self.cli.Del(key).Result()
 	if r == 0 {
@@ -39,6 +40,7 @@ func (self *RdsCon) Del(key string) (bool, error) {
 	return true, err
 }
 
+// https://redis.io/commands/unlink/
 func (self *RdsCon) Unlink(keys ...string) (int64, error) {
 	return self.cli.Unlink(keys...).Result()
 }

@@ -37,7 +37,9 @@
         - [X] 初始化方式
         - 日志插件
         - trace插件
-- log go.uber.org/zap
+- log
+    - [X] go.uber.org/zap
+    - [X] github.com/sirupsen/logrus
 - monitor prometheus+grafana
 - alert lark+钉钉
 - config yaml

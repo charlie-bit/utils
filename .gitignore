@@ -2,3 +2,5 @@
 
 coverage.data
 coverage.html
+
+*.log

@@ -22,18 +22,22 @@
     - [X] 捕捉panic错误，安全开启
 - db
     - redis
+      > 推荐使用GUI RedisInsight https://redis.com/redis-enterprise/redis-insight/
         - [X] 初始化方式
         - 日志插件
         - trace插件
     - mongo
+      > 推荐使用GUI Studio3T https://studio3t.com/
         - [X] 初始化方式
         - 日志插件
         - trace插件
     - mysql
+      > 推荐使用GUI TablePlus https://tableplus.com/
         - [X] 初始化方式
         - 日志插件
         - trace插件
     - postgresql
+      > 推荐使用GUI TablePlus https://tableplus.com/
         - [X] 初始化方式
         - 日志插件
         - trace插件

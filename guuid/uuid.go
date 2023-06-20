@@ -16,7 +16,7 @@ func GenUUID() string {
 	return u.NewString()
 }
 
-// [0,n)
+// RandomUUID [0,n)
 func RandomUUID(n int) string {
 	b := make([]byte, n)
 	for i, cache, remain := n-1, rand.Int63(), letterIdxMax; i >= 0; {

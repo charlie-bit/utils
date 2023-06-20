@@ -80,10 +80,3 @@ func Fatal(args ...interface{}) {
 func Fatalf(template string, args ...interface{}) {
 	Logger.Fatalf(template, args...)
 }
-
-type DingMarkdown struct {
-	Msgtype string `json:"msgtype"`
-	Text    struct {
-		Context string `json:"content"`
-	} `json:"text"`
-}

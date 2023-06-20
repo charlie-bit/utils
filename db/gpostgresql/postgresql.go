@@ -9,8 +9,6 @@ import (
 	"gorm.io/driver/postgres"
 )
 
-var emptyCtx = context.Background()
-
 type MysqlClient struct {
 	*gorm.DB
 }

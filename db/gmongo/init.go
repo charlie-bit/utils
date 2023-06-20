@@ -7,8 +7,6 @@ import (
 	"utils/db/common"
 )
 
-var emptyCtx = context.Background()
-
 type MgoClient struct {
 	*mongo.Database
 }

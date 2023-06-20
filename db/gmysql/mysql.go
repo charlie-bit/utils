@@ -8,8 +8,6 @@ import (
 	"utils/db/common"
 )
 
-var emptyCtx = context.Background()
-
 type MysqlClient struct {
 	*gorm.DB
 }

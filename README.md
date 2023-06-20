@@ -1,86 +1,69 @@
-# 功能列表
+# function list
 
 - basic_convert:
-    - [X] 常见基础数据类型互转，数组互转
+    - [X] common basic data type conversion, array conversion
 - base64
-    - [X] 常见base64加密，解密
+    - [X] common base64 encryption, decryption
 - json
-    - [X] 序列化，反序列化
+    - [X] serialization, deserialization
 - md5
-    - [X] md5加密
+    - [X] md5 encryption
 - random
-    - [X] 区间随机
+    - [X] interval random
 - rsa
-    - [X] 公钥加密
-    - [X] 私钥解密
+    - [X] public key encryption
+    - [X] private key decryption
 - time
-    - [X] 时间格式化通用大类
+    - [X] time formatting general class
 - uuid
-    - [X] 36位uuid
-    - [X] 区间长度uuid
-- goroutine
-    - [X] 捕捉panic错误，安全开启
+    - [X] 36 bit uuid
+    - [X] interval length uuid
+- goroutines
+    - [X] Catch panic errors, enable security
 - db
     - redis
-      > 推荐使用GUI RedisInsight https://redis.com/redis-enterprise/redis-insight/
-        - [X] 初始化方式
-        - 日志插件
-        - trace插件
+      > GUI RedisInsight is recommended https://redis.com/redis-enterprise/redis-insight/
+        - [X] initialization method
     - mongo
-      > 推荐使用GUI Studio3T https://studio3t.com/
-        - [X] 初始化方式
-        - 日志插件
-        - trace插件
+      > Recommended to use GUI Studio3T https://studio3t.com/
+        - [X] initialization method
     - mysql
-      > 推荐使用GUI TablePlus https://tableplus.com/
-        - [X] 初始化方式
-        - 日志插件
-        - trace插件
+      > GUI TablePlus is recommended https://tableplus.com/
+        - [X] initialization method
     - postgresql
-      > 推荐使用GUI TablePlus https://tableplus.com/
-        - [X] 初始化方式
-        - 日志插件
-        - trace插件
+      > GUI TablePlus is recommended https://tableplus.com/
+        - [X] initialization method
 - log
     - [X] go.uber.org/zap
     - [X] github.com/sirupsen/logrus
-- monitor prometheus+grafana
-- alert lark+钉钉
-- config yaml
+- monitor
+    - [X] DingTalk
+- config
+    - [X] yaml
 - cron github.com/robfig/cron
 - db: gorm.io/gorm
-    - 日志插件
-    - timeout插件
-    - trace插件
-- http_client: github.com/go-resty/resty/v2
-    - 日志插件
-    - timeout插件
-    - trace插件
+    - log plugin
+    - timeout plugin
+- http_client: native processing
+    - [X] log plugin
+    - [X] timeout plugin
 - grpc_server:
-    - 日志插件
-    - metric插件
-    - recovery插件
-    - timeout插件
-    - trace插件
+    - log plugin
+    - metric plugin
+    - recovery plugin
+    - timeout plugin
 - grpc_client:
-    - 日志插件
-    - metric插件
-    - timeout插件
-    - trace插件
-- websocket
-    - 日志插件
-    - timeout插件
-    - trace插件
+    - log plugin
+    - metric plugin
+    - timeout plugin
+- websockets
+    - log plugin
+    - timeout plugin
 
-如果大家觉得好用,右上角帮忙点个star吧。:)
-> 收集日常好用的golang工具包。
+If you think it is easy to use, please click a star in the upper right corner. :)
+> Collect golang toolkits that are useful for daily use.
 
-# 联系我们
-
-- 技术支持/咨询请联系作者QQ: 554486586
-- 作者邮箱: 554486586@qq.com
-
-##### 单元测试
+##### unit test
 
 ```
 go test -coverpkg=./... -coverprofile=coverage.data -timeout=5s ./...

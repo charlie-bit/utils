@@ -1,6 +1,6 @@
 # function list
 
-- basic_convert:
+- basic_convert
     - [X] common basic data type conversion, array conversion
 - base64
     - [X] common base64 encryption, decryption
@@ -47,7 +47,7 @@
 - http_client: native processing
     - [X] log plugin
     - [X] timeout plugin
-- grpc_server:
+- grpc_server
     - log plugin
     - metric plugin
     - recovery plugin

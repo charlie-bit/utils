@@ -1,62 +1,57 @@
 # function list
 
 - basic_convert
-    - [X] common basic data type conversion, array conversion
+    - common basic data type conversion, array conversion
 - base64
-    - [X] common base64 encryption, decryption
+    - common base64 encryption, decryption
 - json
-    - [X] serialization, deserialization
+    - serialization, deserialization
 - md5
-    - [X] md5 encryption
+    - md5 encryption
 - random
-    - [X] interval random
+    - interval random
 - rsa
-    - [X] public key encryption
-    - [X] private key decryption
+    - public key encryption
+    - private key decryption
 - time
-    - [X] time formatting general class
+    - time formatting general class
 - uuid
-    - [X] 36 bit uuid
-    - [X] interval length uuid
+    - 36 bit uuid
+    - interval length uuid
 - goroutines
-    - [X] Catch panic errors, enable security
+    - catch panic errors, enable security
 - db
     - redis
       > GUI RedisInsight is recommended https://redis.com/redis-enterprise/redis-insight/
-        - [X] initialization method
+        - initialization method
     - mongo
       > Recommended to use GUI Studio3T https://studio3t.com/
-        - [X] initialization method
+        - initialization method
     - mysql
       > GUI TablePlus is recommended https://tableplus.com/
-        - [X] initialization method
+        - initialization method
     - postgresql
       > GUI TablePlus is recommended https://tableplus.com/
-        - [X] initialization method
+        - initialization method
 - log
-    - [X] go.uber.org/zap
-    - [X] github.com/sirupsen/logrus
+    - go.uber.org/zap
+    - github.com/sirupsen/logrus
 - monitor
-    - [X] DingTalk
+    - DingTalk
 - config
-    - [X] yaml
+    - yaml
 - cron github.com/robfig/cron
-    - [X] new cron job
-    - [X] show the example configuration file
-- db: gorm.io/gorm
-    - log plugin
-    - timeout plugin
+    - new cron job
+    - show the example configuration file
 - http_client: native processing
-    - [X] log plugin
-    - [X] timeout plugin
+    - log plugin
+    - timeout logic
 - grpc_server
     - log plugin
-    - metric plugin
     - recovery plugin
     - timeout plugin
 - grpc_client:
     - log plugin
-    - metric plugin
     - timeout plugin
 - websockets
     - log plugin

@@ -1,0 +1,27 @@
+default: &default
+  debug: true
+
+  # Inner Http status address
+  addr: ":8080"
+  health_uri: "/health"
+
+  cron_table:
+    - name: "hello_world_1"
+      timer: "@every 3m"
+      expiration: "1m"
+      first_run: true
+    - name: "hello_world_2"
+      timer: "*/1 * * * *"
+      expiration: "30s"
+
+# production specific
+production:
+  <<: *default
+  debug: false
+# staging specific
+staging:
+  <<: *default
+
+# development specific
+development:
+  <<: *default

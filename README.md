@@ -41,6 +41,8 @@
 - config
     - [X] yaml
 - cron github.com/robfig/cron
+    - [X] new cron job
+    - [X] show the example configuration file
 - db: gorm.io/gorm
     - log plugin
     - timeout plugin

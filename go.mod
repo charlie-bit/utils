@@ -1,4 +1,4 @@
-module utils
+module github.com/charlie-bit/utils
 
 go 1.19
 

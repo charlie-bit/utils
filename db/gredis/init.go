@@ -3,8 +3,8 @@ package gredis
 import (
 	"fmt"
 	"os"
-	"utils/db/gredis/gredis_config"
-	"utils/third_party/go-redis"
+	"github.com/charlie-bit/utils/db/gredis/gredis_config"
+	"github.com/charlie-bit/utils/third_party/go-redis"
 )
 
 const (

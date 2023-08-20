@@ -4,7 +4,7 @@ import (
 	"errors"
 	"log"
 	"time"
-	"utils/third_party/go-redis"
+	"github.com/charlie-bit/utils/third_party/go-redis"
 )
 
 const (

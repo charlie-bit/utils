@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"time"
-	"utils/config"
+	"github.com/charlie-bit/utils/config"
 
 	"github.com/robfig/cron/v3"
 )

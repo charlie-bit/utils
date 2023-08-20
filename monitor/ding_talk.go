@@ -2,7 +2,7 @@ package monitor
 
 import (
 	"fmt"
-	"utils/http_client"
+	"github.com/charlie-bit/utils/http_client"
 )
 
 type (

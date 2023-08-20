@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"utils/third_party/go-redis/internal/util"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/util"
 )
 
 const (

@@ -3,8 +3,8 @@ package grpc_server
 import (
 	"context"
 	"strings"
-	"utils/grpc_server/grpc_server_config"
-	"utils/gzlog"
+	"github.com/charlie-bit/utils/grpc_server/grpc_server_config"
+	"github.com/charlie-bit/utils/gzlog"
 
 	"google.golang.org/grpc/peer"
 	"google.golang.org/grpc/reflection"

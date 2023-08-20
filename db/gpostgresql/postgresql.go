@@ -4,7 +4,7 @@ import (
 	"context"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"utils/db/common"
+	"github.com/charlie-bit/utils/db/common"
 
 	"gorm.io/driver/postgres"
 )

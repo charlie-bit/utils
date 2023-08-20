@@ -3,7 +3,7 @@ package gredis
 import (
 	"errors"
 	"time"
-	"utils/third_party/go-redis"
+	"github.com/charlie-bit/utils/third_party/go-redis"
 )
 
 const RdsNil = "redis: nil"

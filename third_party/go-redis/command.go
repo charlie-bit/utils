@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"utils/third_party/go-redis/internal"
-	"utils/third_party/go-redis/internal/proto"
-	"utils/third_party/go-redis/internal/util"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/proto"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/util"
 )
 
 type Cmder interface {

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"utils/third_party/go-redis/internal/proto"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/proto"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

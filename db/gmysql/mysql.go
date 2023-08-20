@@ -5,7 +5,7 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"utils/db/common"
+	"github.com/charlie-bit/utils/db/common"
 )
 
 type MysqlClient struct {

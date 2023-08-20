@@ -6,9 +6,9 @@ import (
 	"log"
 	"time"
 
-	"utils/third_party/go-redis/internal"
-	"utils/third_party/go-redis/internal/pool"
-	"utils/third_party/go-redis/internal/proto"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/pool"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/proto"
 )
 
 // Nil reply returned by Redis when key does not exist.

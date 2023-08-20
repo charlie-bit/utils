@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"time"
-	"utils/grpc_client/grpc_client_config"
-	"utils/gzlog"
+	"github.com/charlie-bit/utils/grpc_client/grpc_client_config"
+	"github.com/charlie-bit/utils/gzlog"
 
 	"go.uber.org/zap"
 	"google.golang.org/grpc/credentials/insecure"

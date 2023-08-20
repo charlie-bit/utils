@@ -4,7 +4,7 @@ import (
 	"context"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"utils/db/common"
+	"github.com/charlie-bit/utils/db/common"
 )
 
 type MgoClient struct {

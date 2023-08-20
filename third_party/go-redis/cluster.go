@@ -13,10 +13,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"utils/third_party/go-redis/internal"
-	"utils/third_party/go-redis/internal/hashtag"
-	"utils/third_party/go-redis/internal/pool"
-	"utils/third_party/go-redis/internal/proto"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/hashtag"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/pool"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/proto"
 )
 
 var errClusterNoNodes = fmt.Errorf("redis: cluster has no nodes")

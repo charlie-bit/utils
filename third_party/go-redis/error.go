@@ -6,8 +6,8 @@ import (
 	"net"
 	"strings"
 
-	"utils/third_party/go-redis/internal/pool"
-	"utils/third_party/go-redis/internal/proto"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/pool"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/proto"
 )
 
 var ErrClosed = pool.ErrClosed

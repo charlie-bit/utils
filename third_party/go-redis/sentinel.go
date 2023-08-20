@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"utils/third_party/go-redis/internal"
-	"utils/third_party/go-redis/internal/pool"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal"
+	"github.com/charlie-bit/utils/third_party/go-redis/internal/pool"
 )
 
 //------------------------------------------------------------------------------

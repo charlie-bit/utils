@@ -42,7 +42,7 @@ const (
 	NumColonSecondsTZToken     = "-07:00:00"
 	FracSecond0Token           = ".0"
 	FracSecond9Token           = ".9"
-	YYMMDDHHMMMM               = "2006-01-02 15:04:05"
+	YYMMDDHHMMMM               = "2006-01-02T15:04:05Z"
 )
 
 // Formatter interface defines all methods that can be chained.

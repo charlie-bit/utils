@@ -1,6 +1,7 @@
 package gtime
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -33,4 +34,14 @@ func GetCurrentMilliUnix() int64 {
 // GetCurrentNanoUnix 获取当前的时间 - 纳秒级时间戳
 func GetCurrentNanoUnix() int64 {
 	return time.Now().UnixNano()
+}
+
+// ConvertStringToTime string 转 time.Time
+func ConvertStringToTime(timeStr string) time.Time {
+	t, err := time.Parse(YYMMDDHHMMMM, timeStr)
+	if err != nil {
+		fmt.Println("解析时间错误:", err)
+		return time.Time{}
+	}
+	return t
 }

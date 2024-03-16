@@ -1,6 +1,9 @@
 package gtime
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestGetCurrentDate(t *testing.T) {
 	tests := []struct {
@@ -15,6 +18,8 @@ func TestGetCurrentDate(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := GetCurrentDateYYSlMMSlDD(); got == tt.want {
 				t.Errorf("GetCurrentDate() = %v, want %v", got, tt.want)
+			} else {
+				fmt.Println(got)
 			}
 		})
 	}
